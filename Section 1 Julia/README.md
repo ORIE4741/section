@@ -7,15 +7,14 @@ JuliaBox is an online tool to access Jupyter notebook with Julia kernels. You ma
 
 ### Option 2: Download and install Julia
 Alternatively, you may install Julia on your local computer if you want to do more intensive Julia programming on large datasets that JuliaBox may not be able to handle. Part of this guide comes from the guideline in <https://github.com/JuliaLang/IJulia.jl>. Upon completion, you should be able to see the Julia kernel available in Jupyter notebook:
-
-
+![Julia kernel](https://github.com/ORIE4741/section/blob/master/Section%201%20Julia/Julia_kernel.png "Julia kernel")
 
 #### Step 1: Download your (favorite) version of Julia
 URL: <https://julialang.org/downloads>. We recommend the latest stable release. Follow installation instructions.
 
 #### Step 2: Install Julia kernel into Jupyter notebook
 First, enter Julia prompt:
-
+![Julia prompt](https://github.com/ORIE4741/section/blob/master/Section%201%20Julia/Julia_prompt.png "Julia prompt")
 
 
 ##### Case 1: if you already have a Jupyter notebook installed
@@ -53,7 +52,7 @@ The Jupyter notebook for Julia basics, [Julia syntax tutorial.ipynb](Julia_Synta
 
 ### Case 1: in JuliaBox
 Run the following commands in **JuliaBox’s terminal** (shown below), one line at a time:
-![alt text]( "Logo Title Text 1")
+![JuliaBox's terminal](https://github.com/ORIE4741/section/blob/master/Section%201%20Julia/JuliaBox_terminal.png "JuliaBox's terminal")
 
 ```
 git clone https://github.com/ORIE4741/section.git
