@@ -1,0 +1,16 @@
+\begin{frame}{Full rank matrices}
+Claim: The followings are equivalent for any matrix $A \in \mathbb{R}^{m \times n}$:
+\ben
+\item ($Ax=0 \Leftrightarrow x=0$) 
+\item $A$ has full column rank 
+\item $A^\top A$ is invertible
+\een
+\vfill
+\pause
+\textbf{Equivalence of 1 and 2}:
+\begin{proof}
+	Write $A$ as the concatenation of column vectors $(a_1, a_2, \cdots, a_n)$. $Ax=0$ can then be written as $\sum_{i=1}^n a_i x_i=0$. Thus ($Ax=0 \Leftrightarrow x=0$) is equivalent to the columns of $A$ being linearly independent, i.e. $A$ has full column rank.
+\end{proof}
+\pause
+\textbf{Question: equivalence of 1, 2 and 3?}
+\end{frame}

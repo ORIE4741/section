@@ -1,3 +1,14 @@
+*.nav
+*.snm
+*.toc
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.gz
+*.bcf
+*.run.xml
 .DS_Store
 .ipynb_checkpoints
 airbnb-use-embeddings.csv

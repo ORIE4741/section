@@ -1,0 +1,47 @@
+\begin{frame}{Convexity}
+Definition: A function $f: \mathbb{R}^n \rightarrow \mathbb{R}$ being convex if the domain of $f$ (denoted as $\textbf{dom}(f)$) is a convex set and $\forall x, y \in \textbf{dom}(f)$ and $\theta \in [0,1]$, $f(\theta x + (1- \theta)y) \leq \theta f(x) + (1- \theta)f(y)$.
+\vfill
+\pause
+Equivalent definitions:
+\bit
+\item (First-order Convexity Condition) Suppose a function $f: \mathbb{R}^n \rightarrow \mathbb{R}$ is differentiable in $\textbf{dom}(f)$. Then $f$ is convex if and only if $\textbf{dom}(f)$ is convex and $\forall x, y \in \textbf{dom}(f)$, $f(y) \geq f(x) + \nabla f(x)^{T}(y-x)$.
+\item (Second-order Convexity Condition) Suppose a function $f: \mathbb{R}^n \rightarrow \mathbb{R}$ is twice differentiable in $\textbf{dom}(f)$. Then $f$ is convex if and only if $\textbf{dom}(f)$ is convex, $\forall x \in \textbf{dom}(f)$, $\nabla^2 f \succeq 0$ (positive semi-definite).
+\eit
+\end{frame}
+
+\begin{frame}{Convergence rate of smooth functions}
+A function $f$ is smooth if and only if $\forall x, y \in \textbf{dom}(f)$, $f(y) \leq f(x) + \nabla f(x)^{T}(y-x) + \frac{\beta}{2}||x-y||^2$.
+
+\vfill
+
+\pause
+Theorem: Under the following conditions:
+\ben
+	\item $f: \mathbb{R}^n \rightarrow \mathbb{R}$ is convex and differentiable with $\textbf{dom}(f) = \mathbb{R}^n$
+	\item $f$ is smooth with parameter $\beta >0$
+	\item  Optimal value $p^{*}=\inf_x f(x)$ is finite and is attained at $x^{*}$
+\een
+If we perform gradient descent updates $x^{(k+1)} = x - t \nabla f(x^{(k)}) $ on $f$ with a constant step size $t$ that satisfies $0 < t \leq \frac{1}{\beta}$, the number of steps taken to achieve $f(x^{(k)})-p^* \leq \epsilon$ is $O(\frac{1}{\epsilon})$.
+
+\end{frame}
+
+\begin{frame}{Convergence on least squares problem}
+Our problem: $\text{minimize} ||y-Xw||^2$
+
+\vfill
+First and second-order derivatives: 
+$\nabla_w ||y-Xw||^2 = 2X^\top (Xw-y)$
+
+$\nabla^2_w ||y-Xw||^2 = 2X^\top X$
+
+\vfill
+Properties of the least squares problem:
+\bit
+\item Convexity: $\nabla^2_w ||y-Xw||^2 \succeq 0$
+\item Smoothness: $||\nabla_w ||y-Xw_1||^2 - \nabla_w ||y-Xw_2||^2|| \leq 2||X^\top X||_\text{op} ||w_1 - w_2||_2$
+\eit
+
+Thus if step size $t$ satisfies $0 \leq t \leq \frac{1}{2||X^\top X||_\text{op}}$, we can get a convergence rate of $O(\frac{1}{k})$ with respect to the number of steps $k$.
+
+\end{frame}
+%\input{results}

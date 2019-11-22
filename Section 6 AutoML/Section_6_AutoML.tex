@@ -1,0 +1,68 @@
+\documentclass{beamer}
+
+\input defs.tex
+\input formatting.tex
+\newcommand{\citet}[1]{{\footnotesize{\textmd{[#1]}}}}
+
+%\mode<handout>
+\mode<presentation>
+{
+\usetheme{default}
+}
+\setbeamertemplate{footline}[frame number]
+
+\usepackage{amsmath,amsthm,comment,mathtools}
+\usepackage{array,graphicx,amssymb,psfrag}
+\usepackage{caption,subcaption}
+\usepackage{algorithm,algorithmicx,algpseudocode}
+\usepackage{epstopdf}
+\epstopdfsetup{update}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\pgfplotsset{every axis legend/.append style={%
+cells={anchor=west}}
+}
+\usetikzlibrary{arrows}
+\tikzset{>=stealth'}
+\pgfplotsset{width=12cm}
+
+\bibliographystyle{alpha}
+
+\title{ORIE 4741: Introduction to AutoML}
+
+\date{\textcolor{blue}{October 28, 2019}}
+\author{Chengrun Yang \\
+	[1ex]
+%	Operations Research and Information Engineering \\
+}
+
+\begin{document}
+
+\begin{frame}
+%\includegraphics[width=.12\linewidth]{cornell_seal.pdf}
+\titlepage
+\end{frame}
+
+
+ \begin{frame}{Outline}
+ \tableofcontents
+ \end{frame}
+
+\section{Motivation}
+
+\input{motivation}
+
+\section{Some AutoML systems}
+\input{some_automl_systems}
+
+\section{Demo!}
+\input{overfitting}
+
+\begin{frame}[allowframebreaks]{References}
+\bibliographystyle{alpha}
+\bibliography{scholar}
+\end{frame}
+
+\end{document}
