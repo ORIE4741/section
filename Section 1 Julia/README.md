@@ -1,75 +1,55 @@
 # Section 1 Julia
-We recommend Julia 1.0+ for either of the options below because of syntax changes happened with the release of Julia 1.0. Our notebooks throughout the course only support Julia 1.0+.
+We strongly recommend using Julia 1.0+ because of major syntax changes happened with the release of Julia 1.0. Our notebooks throughout this course will only support Julia 1.0+.
 
 ## Part 1: Access to Julia and Jupyter notebook
-### Option 1: Use Julia in JuliaBox
-JuliaBox is an online tool to access Jupyter notebook with Julia kernels. You may create an account at <https://www.juliabox.com> to get started.
-
-### Option 2: Download and install Julia
-Alternatively, you may install Julia on your local computer if you want to do more intensive Julia programming on large datasets that JuliaBox may not be able to handle. Part of this guide comes from the guideline in <https://github.com/JuliaLang/IJulia.jl>. Upon completion, you should be able to see the Julia kernel available in Jupyter notebook:
+In this part, we show how to install Julia on your local computer. A local installation is recommended if you want to do (slightly) more intensive Julia programming on large datasets. Upon completion, you should be able to see the Julia kernel available in Jupyter notebook:
 
 ![Julia kernel](https://github.com/ORIE4741/section/blob/master/Section%201%20Julia/Julia_kernel.png "Julia kernel")
 
-#### Step 1: Download your (favorite) version of Julia
-URL: <https://julialang.org/downloads>. We recommend the latest stable release. Follow installation instructions.
+#### Step 1: Download and install Julia
+Go to <https://julialang.org/downloads>. We recommend the latest stable release (v1.5.1 as of 09/08/2020). Follow installation instructions.
 
 #### Step 2: Install Julia kernel into Jupyter notebook
-First, enter Julia prompt:
+If you don't have Jupyter notebook installed on your computer, we recommend installing Anaconda. It is a free and open-source distribution that includes applications like Jupyter notebook and other programming languages like Python, and should be useful even outside this course. The installer can be found at <https://www.anaconda.com/products/individual>. 
+
+With a locally installed Jupyter notebook, we first enter the Julia prompt by opening the installed Julia application:
+
+![Julia application](https://github.com/ORIE4741/section/blob/master/Section%201%20Julia/Julia_application.png "Julia application")
+
+and you would be able to see the prompt as
 
 ![Julia prompt](https://github.com/ORIE4741/section/blob/master/Section%201%20Julia/Julia_prompt.png "Julia prompt")
-
-
-##### Case 1: if you already have a Jupyter notebook installed
 
 Type in the following commands, one by one, in **Julia prompt**:
 ```
 using Pkg
 Pkg.add("IJulia")
 ```
-Then open Jupyter notebook. You will find a Julia kernel.
-
-##### Case 2: If you don’t have Jupyter notebook on your computer
-
-Type in the following commands in **Julia prompt**:
-```
-using Pkg
-Pkg.add("IJulia")
-using IJulia
-notebook()
-```
-Afterwards, you may access to Jupyter notebook with Julia kernel installed at everytime by doing the following in **Julia prompt**:
-```
-using IJulia
-notebook()
-```
-Or, if you had already installed Jupyter notebook from other sources (e.g., Anaconda) beforehand, you may access to the notebook by doing the following in terminal, outside **Julia prompt**:
-```
-jupyter notebook
-```
+Then open Jupyter notebook by typing `jupyter notebook` in command line. You will find the Julia kernel as shown at the beginning.
 
 
-## Part 2: Access to the Jupyter notebook for this section
+## Part 2: Access the Jupyter notebook for this section
 
-The Jupyter notebook for Julia basics, [Julia syntax tutorial.ipynb](Julia_Syntax_Tutorial.ipynb), is in this folder. The way to access it depends on where you are using Julia:
+The Jupyter notebook for Julia basics, [Julia syntax tutorial.ipynb](Julia_Syntax_Tutorial.ipynb), is in this folder. We will first clone this GitHub repository (if you wonder what this means, we will talk about it in roughly two weeks!) to your local computer and then run the notebook.
 
-### Case 1: in JuliaBox
-Run the following commands in **JuliaBox’s terminal** (shown below), one line at a time:
-
-![JuliaBox's terminal](https://github.com/ORIE4741/section/blob/master/Section%201%20Julia/JuliaBox_terminal.png "JuliaBox's terminal")
-
-```
-git clone https://github.com/ORIE4741/section.git
-cp -R /home/jrun/section /mnt/juliabox
-```
-
-You will then see a cloned folder named “section”. Find the folder of this Julia section, open Julia_Syntax_Tutorial.ipynb.
-
-
-### Case 2: in local computer
-In **terminal (not Julia's prompt)**, clone the section repository by
+### Step 1: clone the GitHub repository
+In **terminal (not Julia's prompt)**, clone the repository for all ORIE4741 sections by
 
 ```
 git clone https://github.com/ORIE4741/section.git
 ```
 
-There will be a cloned folder named "section" in your local computer. Find the folder of this Julia section, open Julia_Syntax_Tutorial.ipynb.
+There will be a cloned folder named "section" in your local computer at the current path.
+
+### Step 2: Open the tutorial notebook
+In terminal, again type `jupyter notebook` [^1]. The terminal will start a Jupyter notebook process [^2], and you will be re-directed to the browser. Then in browser, navigate to the "section" repository you just cloned:
+
+![Jupyter browser](https://github.com/ORIE4741/section/blob/master/Section%201%20Julia/Jupyter_browser.png "Jupyter browser")
+
+Then open `Section 1 Julia/Julia_Syntax_Tutorial.ipynb`.
+
+[^1]: The current path determines how many files you can access to in Jupyter notebook. You may want to navigate to the root or home directory before typing this command if you want to access most of the files in your local computer.
+[^2]:  Don't close the terminal window or terminate the process when you use Jupyter notebook.
+
+### References
+- IJulia: <https://github.com/JuliaLang/IJulia.jl>
