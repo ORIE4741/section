@@ -62,5 +62,5 @@ Then open `Section 1 Julia/Julia_Syntax_Tutorial.ipynb`.
 <b id="f2">2</b>: Don't close the terminal window or terminate the process when you use Jupyter notebook.
 
 ### References
-
+- Julia syntax manual: <https://docs.julialang.org/en/v1/manual/getting-started/>
 - IJulia: <https://github.com/JuliaLang/IJulia.jl>
