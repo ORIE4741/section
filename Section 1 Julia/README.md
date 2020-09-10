@@ -34,7 +34,7 @@ Pkg.add("IJulia")
 Pkg.build("IJulia")
 ```
 
-Then open Jupyter notebook by typing `jupyter notebook` in command line. You will find the Julia kernel as shown at the beginning. (If you already have a Jupyter notebook session open before installing IJulia.jl, refresh the Jupyter notebook webpage. )
+Then open Jupyter notebook by typing `jupyter notebook` in **command line (not Julia prompt)**. You will find the Julia kernel as shown at the beginning. (If you already have a Jupyter notebook session open before installing IJulia.jl, refresh the Jupyter notebook webpage. )
 
 ## Part 2: Access the Jupyter notebook for this section
 
