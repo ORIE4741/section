@@ -33,16 +33,9 @@ There will be a cloned folder named "section" in your local computer at the curr
 
 ### Step 2: Open the tutorial notebook
 
-In terminal, again type `jupyter notebook` <sup id="a1">[1](#f1)</sup>. The terminal will start a Jupyter notebook process <sup id="a2">[2](#f2)</sup>, and you will be re-directed to the browser. Then in browser, navigate to the "section" repository you just cloned:
-
-![Jupyter browser](https://github.com/ORIE4741/section/blob/master/Section%201%20Julia/Jupyter_browser.png "Jupyter browser")
-
-Then open `Section 1 - Python for Data Science/Section 1 - Pandas Crash Course`.
+In terminal, again type `jupyter notebook` <sup id="a1">[1](#f1)</sup>. The terminal will start a Jupyter notebook process <sup id="a2">[2](#f2)</sup>, and you will be re-directed to the browser. Then in browser, navigate to the "section" repository you just cloned and open `Section 1 - Python for Data Science/Section 1 - Pandas Crash Course`.
 
 <b id="f1">1</b>: The current path determines how many files you can access to in Jupyter notebook. You may want to navigate to the root or home directory before typing this command if you want to access most of the files in your local computer. 
 
 <b id="f2">2</b>: Don't close the terminal window or terminate the process when you use Jupyter notebook.
 
-### References
-- Julia syntax manual: <https://docs.julialang.org/en/v1/manual/getting-started/>
-- IJulia: <https://github.com/JuliaLang/IJulia.jl>
